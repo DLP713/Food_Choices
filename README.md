@@ -32,11 +32,12 @@ This application provides users with food recipe choices based on their selectio
     THEN the recipes should be presented in cards
 
 ## Wireframes
-
+![project wireframe](./assets/images/Wireframing-Project-1.png) 
 
 ## APIs Used
 * [Rapid API](https://rapidapi.com/spoonacular/api/recipe-food-nutrition)
 * [Edamam](https://developer.edamam.com/food-database-api-docs)
+* [Material](https://material.io/develop)
 
 ## Roles
 ### 🎨 Frontend Developer/Designers: 
