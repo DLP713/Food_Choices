@@ -32,7 +32,7 @@ This application provides users with food recipe choices based on their selectio
     THEN the recipes should be presented in cards
 
 ## Wireframes
-:::image type="content" source="assets/images/Wireframing-Project-1.png" alt-text="project wireframe":::
+![project wireframe](./assets/images/Wireframing-Project-1.png) 
 
 ## APIs Used
 * [Rapid API](https://rapidapi.com/spoonacular/api/recipe-food-nutrition)
