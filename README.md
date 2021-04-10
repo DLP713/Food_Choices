@@ -37,7 +37,7 @@ This application provides users with food recipe choices based on their selectio
 ## APIs Used
 * [Rapid API](https://rapidapi.com/spoonacular/api/recipe-food-nutrition)
 * [Edamam](https://developer.edamam.com/food-database-api-docs)
-* [Material](https://material.io/develop)
+* [Materialize](https://materializecss.com/)
 
 ## Roles
 ### 🎨 Frontend Developer/Designers: 

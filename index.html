@@ -1,33 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CMaterial+Icons">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/4.11.1/index.js" integrity="sha512-Qeh+FjNYHuWEIkHF5v1DU4rDIMt0FvLoq0oSoDKJ6lEzMnw5FbOVj1vDrehn5O7qIMD6q6aw8o6199fDIx/NtQ==" crossorigin="anonymous"></script>
-    <title>Foodly</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Document</title>
 </head>
 
 <body>
+    <form action="diet-selection"><span>Diet Selection</span>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Dairy Allergy</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Gluten Allergy</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Peanut Allergy</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Tree nut Allergy</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Vegan</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Vegetarian</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Pescetarian</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Egg Allergy</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Soy Allergy</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Fish Allergy</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" class="filled-in" />
+                <span>Shellfish Allergy</span>
+            </label>
+        </p>
+    </form>
 
-    <header id="banner">
-        <h1 id="siteName">Foodly</h1>
-    </header>
-    
-    <section class="drop-down-menu">
-        <button id="generate-recipes">Generate Recipes</button>
-    </section>
+    <div id="recipe-cards">
+        <div class="row">
+            <div class="col s12 m7">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
 
-    <hr id="hr">
-
-    <section class="recipe-returns">
-       
-    </section>
-
-    <script src="assets/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
