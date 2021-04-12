@@ -19,15 +19,23 @@
     font-weight: lighter;
 }
 
-.drop-down-menu{
+.diet-div{
     background-color: '';
     width:98%;
     height:125px;
     margin: 5px;
 }
 
+.filled-in{
+    margin:3px;
+    padding:3px;
+    display:inline-block;
+}
+
 .generate-recipes{
-    float:right;
+    position:absolute;
+    right:10px;
+    top: 2px;
     background-color:rgb(223, 223, 223);
     border: 1px solid black;
 }
@@ -51,4 +59,8 @@
     margin: 3px;
     padding: 5px;
     background-color: rgb(223, 223, 223);
+}
+
+.card-title {
+    color:black;
 }
