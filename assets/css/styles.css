@@ -46,8 +46,9 @@ body{
 }
 
 #banner-photo{
-    height: 70%;
-    width: 99%;
+    /* height: 100%; */
+    width: 98.5%;
+    background:linear-gradient(rgb(243, 243, 243,));
 }
 
 #siteName{
@@ -87,7 +88,7 @@ how to get the words closer to the text boxes. */
 
 #generate-recipes{
     position:relative;
-    margin-top: 5px;
+    margin-top: 12px;
     background-color:rgb(39, 70, 39);
     border: 1px solid green;
     color: white;
@@ -95,16 +96,11 @@ how to get the words closer to the text boxes. */
     width:165px;
 }
 
-/* #hr{
-    border: 1px solid green;
-    width: 100%;
-} */
-
 #bottom-section{
     width:99.5%;
     height:80%;
     background-color:rgb(243, 243, 243);
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #recipe-returns{
@@ -132,8 +128,6 @@ how to get the words closer to the text boxes. */
 }
 /*Not working but will figure it out*/
 
-/*Need to style card title & having issues. */
-
 .card-content {
     color:rgb(39, 70, 39);
     font-weight:lighter;
@@ -145,7 +139,6 @@ how to get the words closer to the text boxes. */
 .card-title{
     margin-top: 40px;
 }
-
 
 .card-image {
     width:175px;

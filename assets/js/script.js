@@ -28,19 +28,18 @@ fetch(endpoint)
             cardTitle.textContent = (`${data.hits[i].recipe.label}`);
 
 
-            // var cardContent = document.getElementsByClassName(".card-content");
-            // cardContent.textContent = (`${data.hits[i].recipe.label}`);
+            // var cardContent = document.classList.add(".card-content");
+            // cardContent.textContent = (`${data.hits[i].recipe.           }`);
 
-            // var cardImage = document.getElementsByClassName(".card-image");
+            // var cardImage = document.createElement('img');
+            // cardImage = document.classList.ass('card-image');
             // cardImage.setAttribute(
             //     'src',
-            //     ``
+            //      `https://www.edamam.com/web-img/${data.hits[i].recipe.image}.jpg`
             // );
 
-            // var cardLink = document.getElementsByClassName(".card-link");
-            // cardLink.textContent = (`${data.hits[i].recipe.url}`);
-
             cardAppend[i].appendChild(cardTitle);
+            // cardAppend[i].appendChild(cardImage);
             // cardAppend[i].appendChild(cardContent);
             // cardAppend[i].appendChild(cardLink);
         };
