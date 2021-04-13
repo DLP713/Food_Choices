@@ -1,19 +1,53 @@
+
+var contentCard = "https://material-ui.com/components/cards/#RecipeReviewCard.js"
+var apiID = `daae60e1`
+var apiKey = `cc39f5ebdea0803927099971a33add46`
+var card = document.getElementsByClassName("card")
+
 // Edamam API Calls for Recipe
 
 var API_KEY = 'cc39f5ebdea0803927099971a33add46';
 var APP_ID = 'daae60e1';
-var searchTerm = 'cabbage';
+var searchTerm = 'Dairy Free';
 
-var endpoint = `https://api.edamam.com/search?q=${searchTerm}&app_id=${APP_ID}&app_key=${API_KEY}&from=0&to=5&calories=591-722`;
+var endpoint = `https://api.edamam.com/search?q=${searchTerm}&app_id=${APP_ID}&app_key=${API_KEY}&from=0&to=6&calories=591-722`;
 
 fetch(endpoint)
-	.then(function (res) { 
-		return res.json();
-	 })
-	 .then(function (data){
-		 console.log(data);
+	.then((res) => (res.json())
+	.then((data) => {
+		console.log(data);
 
-		 //data we want to capture
-		console.log(data.hits[2]);
-		
-	 })
+        var cardAppend = document.getElementsByClassName("card-content");
+
+        for (var i = 0; i < data.hits.length; i++){
+
+            var cardAppend = document.getElementsByClassName("card-content");
+
+            var cardTitle = document.createElement('h6');
+            cardTitle.classList.add('card-title');
+            cardTitle.textContent = (`${data.hits[i].recipe.label}`);
+
+
+            // var cardContent = document.classList.add(".card-content");
+            // cardContent.textContent = (`${data.hits[i].recipe.           }`);
+
+            // var cardImage = document.createElement('img');
+            // cardImage = document.classList.ass('card-image');
+            // cardImage.setAttribute(
+            //     'src',
+            //      `https://www.edamam.com/web-img/${data.hits[i].recipe.image}.jpg`
+            // );
+
+            cardAppend[i].appendChild(cardTitle);
+            // cardAppend[i].appendChild(cardImage);
+            // cardAppend[i].appendChild(cardContent);
+            // cardAppend[i].appendChild(cardLink);
+        };
+    })
+    
+);
+
+// function generateRecipes(){
+//     var generateButton = document.getElementById("generate-recipes");
+
+//     recipeReturns.setAttribute("class", "hide"); 
