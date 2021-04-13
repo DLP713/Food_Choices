@@ -52,5 +52,3 @@ fetch(endpoint)
 //     var generateButton = document.getElementById("generate-recipes");
 
 //     recipeReturns.setAttribute("class", "hide"); 
-
-}
