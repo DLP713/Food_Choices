@@ -71,15 +71,6 @@
     margin:5px;
 }
 
-/* .randomSquare{
-    border: 1px solid black;
-    height:100px;
-    width:100px;
-    margin: 3px;
-    padding: 5px;
-    background-color: rgb(223, 223, 223);
-} */
-
 .card{
     margin: 15px;
     display: flex;
@@ -88,9 +79,7 @@
     justify-content: space-between;
 }
 
-#card-title {
-    color:black;
-}
+/*Need to style card title & having issues. Rounded edges with a border. */
 
 .card-content {
     color:black;
