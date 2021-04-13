@@ -40,16 +40,15 @@
     color: black;
 }
 
-.filled-in{
-    margin-left: 3px;
-    padding-left: 3px;
-}
+/* .filled-in{
+    margin:auto;
+    padding:auto;
 
-.allergen{
-    margin-left: 0px;
-}
-/*Need to figure out how to get spans to row evenly and 
-how to get the words closer to the text boxes.*/
+    I set parameters but wasn't working.
+} */
+
+/* Need to figure out how to get spans to row evenly and 
+how to get the words closer to the text boxes. */
 
 #generate-recipes{
     position:absolute;
