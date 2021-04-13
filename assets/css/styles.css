@@ -5,42 +5,73 @@ body{
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: rgb(243, 243, 243);
+    background-color:rgb(39, 70, 39);
+    opacity: 0.8;
+    padding:20px;
 }
 
 #top-section{
-    width:99%;
+    width:99.5%;
     height:20%;
     background-color: rgb(243, 243, 243);
+    border-radius: 7px;
+    border: .5px white solid;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#top-border{
+    background-color: '';
+    border: .5px solid rgb(39, 70, 39);
+    border-radius: 5px;
+    width:98%;
+    height:98%;
+    margin:7px;
+}
+
+#opening-image{
+    width:99.5%;
+    height:99.5%;
+    margin:5px;
+    display: flex;
+    flex-direction: row;
 }
 
 .banner{
     background-color: transparent;
     width:98%;
-    height: 300px;
+    height: 100%;
 }
 
 #banner-photo{
-    height: 300px;
-    width: 769.16px;
-    align-self: center;
-
+    height: 50%;
+    width: 100%;
 }
 
+/* 
+#banner-photo{
+    height: 300px;
+    width: 769.16px;
+    border-right: 10px white solid;
+} */
+
 #siteName{
-    /* text-align: center; */
-    margin-top: -80px;
-    margin-left: 330px;
+    /* margin-top: -80px;
+    margin-left: 570px; */
+    width:100%;
+    height:50%;
+    margin:0;
     font-weight: lighter;
     color:white;
 }
+/*Margin-left for site name was 330px + margin top -80px;*/
+/*Changed to 570px for a right-bottom align + margin-top -80px;*/
 
 #diet-div{
     background-color: '';
     width:98%;
-    height:125px; /*Need to change this to percentage. */
+    height:60%; /*Need to change this to percentage. */
     margin: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -64,31 +95,34 @@ body{
 how to get the words closer to the text boxes. */
 
 #generate-recipes{
-    position:absolute;
-    margin-top: 110px;
-    background-color:rgb(53, 114, 53);
+    position:relative;
+    margin-top: 5px;
+    background-color:rgb(39, 70, 39);
     border: 1px solid green;
     color: white;
+    height:35px;
+    width:165px;
 }
 
-#hr{
-    border: 1px solid black;
+/* #hr{
+    border: 1px solid green;
     width: 100%;
-}
+} */
 
 #bottom-section{
-    width:99%;
+    width:99.5%;
     height:80%;
-    background-color:rgb(53, 114, 53);
-    opacity: 0.8;
+    background-color:rgb(243, 243, 243);
+    margin-top: 10px;
 }
 
 #recipe-returns{
     background-color: '';
-    border: .5px solid white;
-    width:99.5%;
-    height:99.5%;
-    margin:7px; /*Not sure why right border is weird.*/
+    border: .5px solid rgb(39, 70, 39);
+    border-radius: 7px;
+    width:98%;
+    height:98%;
+    margin:7px;
     padding:20px;
     display: flex;
     flex-wrap: wrap;
@@ -99,6 +133,7 @@ how to get the words closer to the text boxes. */
 .card{
     width: 300px;
     height: 360px;
+    text-align: center;
 }
 
 .card:hover{
@@ -109,7 +144,7 @@ how to get the words closer to the text boxes. */
 /*Need to style card title & having issues. */
 
 .card-content {
-    color:black;
+    color:rgb(39, 70, 39);
     font-weight:lighter;
     width: 98%;
     height:98%;
@@ -117,10 +152,7 @@ how to get the words closer to the text boxes. */
 }
 
 .card-title{
-    width:98%;
-    display: inline;
-    margin-left: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 /*titles are showing up under the cards for some reason. */
