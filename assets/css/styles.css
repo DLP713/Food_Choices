@@ -66,7 +66,7 @@ how to get the words closer to the text boxes. */
     height:70%;
 }
 
-.recipe-returns{
+#recipe-returns{
     background-color: '';
     border: .5px solid black;
     width:99.5%;
@@ -80,25 +80,29 @@ how to get the words closer to the text boxes. */
 }
 
 .card{
+    background-color: transparent;
     width: 300px;
     height:340px;
 }
 
-/*Need to style card title & having issues. Rounded edges with a border. */
+/*Need to style card title & having issues. */
 
 .card-content {
     color:black;
     font-weight:lighter;
     width: 98%;
     height:98%;
-    margin-top: -35px;
+    margin-top: -45px;
 }
 
 .card-title{
     width:98%;
-    margin-left:29%;
-    align-items: center;
+    display: inline;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
+
+/*titles are showing up under the cards for some reason. */
 
 .card-image {
     width:175px;

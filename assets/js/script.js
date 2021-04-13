@@ -2,6 +2,7 @@
 var contentCard = "https://material-ui.com/components/cards/#RecipeReviewCard.js"
 var apiID = `daae60e1`
 var apiKey = `cc39f5ebdea0803927099971a33add46`
+var card = document.getElementsByClassName("card")
 
 // Edamam API Calls for Recipe
 
@@ -15,34 +16,41 @@ fetch(endpoint)
 	.then((res) => (res.json())
 	.then((data) => {
 		console.log(data);
-		//data we want to capture
-		console.log(data.hits[2]);
 
-        var cardAppend = document.getElementsByClassName(".card");
+        var cardAppend = document.getElementsByClassName("card-content");
 
-        for (var i = 0; i < cardAppend.length; i++){
+        for (var i = 0; i < data.hits.length; i++){
 
-            var cardAppend = document.getElementsByClassName(".card");
+            var cardAppend = document.getElementsByClassName("card-content");
 
-            var cardTitle = document.createElement('h4');
+            var cardTitle = document.createElement('h6');
             cardTitle.classList.add('card-title');
-            cardTitle.textContent = (`${data.hits[2].recipe.label}`);
+            cardTitle.textContent = (`${data.hits[i].recipe.label}`);
 
 
-            var cardContent = document.getElementsByClassName(".card-content");
-            // cardContent.textContent = ();
+            // var cardContent = document.getElementsByClassName(".card-content");
+            // cardContent.textContent = (`${data.hits[i].recipe.label}`);
 
-            var cardImage = document.getElementsByClassName(".card-image");
+            // var cardImage = document.getElementsByClassName(".card-image");
             // cardImage.setAttribute(
             //     'src',
             //     ``
             // );
 
-            var cardLink = document.getElementsByClassName(".card-link");
-            // cardLink.textContent = ();
+            // var cardLink = document.getElementsByClassName(".card-link");
+            // cardLink.textContent = (`${data.hits[i].recipe.url}`);
 
             cardAppend[i].appendChild(cardTitle);
+            // cardAppend[i].appendChild(cardContent);
+            // cardAppend[i].appendChild(cardLink);
         };
     })
     
 );
+
+// function generateRecipes(){
+//     var generateButton = document.getElementById("generate-recipes");
+
+//     recipeReturns.setAttribute("class", "hide"); 
+
+}
