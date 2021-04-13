@@ -17,6 +17,7 @@ body{
     border-radius: 7px;
     border: .5px white solid;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     margin-bottom: 10px;
 }
@@ -35,43 +36,31 @@ body{
     height:99.5%;
     margin:5px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .banner{
     background-color: transparent;
-    width:98%;
-    height: 100%;
+    display:flex;
+    flex-direction:column;
 }
 
 #banner-photo{
-    height: 50%;
-    width: 100%;
+    height: 70%;
+    width: 99%;
 }
-
-/* 
-#banner-photo{
-    height: 300px;
-    width: 769.16px;
-    border-right: 10px white solid;
-} */
 
 #siteName{
-    /* margin-top: -80px;
-    margin-left: 570px; */
-    width:100%;
-    height:50%;
-    margin:0;
+    align-self: center;
+    margin-top:-75px;
     font-weight: lighter;
     color:white;
 }
-/*Margin-left for site name was 330px + margin top -80px;*/
-/*Changed to 570px for a right-bottom align + margin-top -80px;*/
 
 #diet-div{
     background-color: '';
     width:98%;
-    height:60%; /*Need to change this to percentage. */
+    height:60%;
     margin: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -82,6 +71,8 @@ body{
 #form-header{
     font-weight: lighter;
     color: black;
+    font-size: 20px;
+    margin:0;
 }
 
 /* .filled-in{
@@ -155,7 +146,6 @@ how to get the words closer to the text boxes. */
     margin-top: 40px;
 }
 
-/*titles are showing up under the cards for some reason. */
 
 .card-image {
     width:175px;
