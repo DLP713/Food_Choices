@@ -25,11 +25,11 @@ fetch(endpoint)
 
             var cardTitle = document.createElement('h6');
             cardTitle.classList.add('card-title');
-            cardTitle.textContent = (`${data.hits[i].recipe.label}`);
+            cardTitle.textContent = data.hits[i].recipe.label;
 
 
-            // var cardContent = document.classList.add(".card-content");
-            // cardContent.textContent = (`${data.hits[i].recipe.           }`);
+            // cardContent = document.classList.add(".card-content");
+            // cardContent.textContent = data.hits[i].recipe.;
 
             // var cardImage = document.createElement('img');
             // cardImage = document.classList.ass('card-image');
