@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Foodly</title>
@@ -20,7 +21,9 @@
                 <div class="banner">
                     <img id="banner-photo" src="assets/images/healthy-food-background.jpeg">
                 </div>
-                <header class="banner"><h1 id="siteName">Foodly</h1></header>
+                <header class="banner">
+                    <h1 id="siteName">Foodly</h1>
+                </header>
 
             </section>
 
@@ -83,8 +86,9 @@
 
     <section id="bottom-section">
 
-        <section id="recipe-returns"> <!--This is basically the border in the bottom div-->
-            
+        <section id="recipe-returns">
+            <!--This is basically the border in the bottom div-->
+
             <a class="card" href="http://www.foodnetwork.com">
                 <div class="card-content">
                     <span class="card-title"></span>
@@ -93,10 +97,11 @@
                     <img src="./assets/images/chickensandwich.jpeg">
                 </div>
                 <div class="iconwrapper">
-                    <i class="material-icons">playlist_add</a></i>
-                </div>
+                    <i class="material-icons">playlist_add
+            </a></i>
             </div>
-            </a>              <a class="card" href="http://www.foodnetwork.com">
+            </div>
+            </a> <a class="card" href="http://www.foodnetwork.com">
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
@@ -104,10 +109,11 @@
                     <img src="./assets/images/chickensandwich.jpeg">
                 </div>
                 <div class="iconwrapper">
-                    <i class="material-icons">playlist_add</a></i>
-                </div>
+                    <i class="material-icons">playlist_add
+            </a></i>
             </div>
-            </a>              <a class="card" href="http://www.foodnetwork.com">
+            </div>
+            </a> <a class="card" href="http://www.foodnetwork.com">
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
@@ -115,10 +121,11 @@
                     <img src="./assets/images/chickensandwich.jpeg">
                 </div>
                 <div class="iconwrapper">
-                    <i class="material-icons">playlist_add</a></i>
-                </div>
+                    <i class="material-icons">playlist_add
+            </a></i>
             </div>
-            </a>              <a class="card" href="http://www.foodnetwork.com">
+            </div>
+            </a> <a class="card" href="http://www.foodnetwork.com">
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
@@ -126,10 +133,11 @@
                     <img src="./assets/images/chickensandwich.jpeg">
                 </div>
                 <div class="iconwrapper">
-                    <i class="material-icons">playlist_add</a></i>
-                </div>
+                    <i class="material-icons">playlist_add
+            </a></i>
             </div>
-            </a>              <a class="card" href="http://www.foodnetwork.com">
+            </div>
+            </a> <a class="card" href="http://www.foodnetwork.com">
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
@@ -137,10 +145,11 @@
                     <img src="./assets/images/chickensandwich.jpeg">
                 </div>
                 <div class="iconwrapper">
-                    <i class="material-icons">playlist_add</a></i>
-                </div>
+                    <i class="material-icons">playlist_add
+            </a></i>
             </div>
-            </a>              <a class="card" href="http://www.foodnetwork.com">
+            </div>
+            </a> <a class="card" href="http://www.foodnetwork.com">
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
@@ -148,14 +157,61 @@
                     <img src="./assets/images/chickensandwich.jpeg">
                 </div>
                 <div class="iconwrapper">
-                    <i class="material-icons">playlist_add</a></i>
-                </div>
+                    <i class="material-icons">playlist_add
+            </a></i>
             </div>
-            </a>  
+            </div>
+            </a>
 
         </section>
 
+        <!-- ----------------------------------------------- -->
+        <!-- modal trigger button test -->
+        <div class="card-panel center">
+            <h3>Geeks for Geeks</h3>
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn 
+            green darken-1 modal-trigger" href="#demo-modal">
+                Click Here!
+            </a>
 
+            <!-- Modal Structure -->
+            <div id="demo-modal" class="modal">
+                <div class="modal-content">
+                    <h4>Demo of Simple Modal</h4>
+                    <p>
+                    <div class="red-text">
+                        Content of the modal goes here. <br>
+                        Type information here. <br>
+                    </div>
+                    C is a procedural programming language.
+                    It was initially developed by Dennis
+                    Ritchie as a system programming language
+                    to write operating system. The main
+                    features of C language include low-level
+                    access to memory, simple set of keywords,
+                    and clean style, these features make C
+                    language suitable for system programming
+                    like operating system or compiler development.
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action 
+                    modal-close waves-effect waves-green 
+                    btn green lighten-1">
+                        Close
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('.modal').modal();
+            })
+        </script>
+        <!-- modal trigger button test -->
+        <!-- ----------------------------------------------- -->
 
         <script src="./assets/js/script.js"></script>
 </body>
