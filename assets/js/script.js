@@ -44,42 +44,31 @@ const pescetarian = document.getElementById('pescetarian');
 let checkboxArray = [dairyAllergy, glutenAllergy, peanutAllergy, vegan, vegetarian, pescetarian];
 console.log(checkboxArray.length);
 
-
-//This is to console log whether or not checkbox is checked
-console.log(dairyAllergy.checked);
-console.log(glutenAllergy.checked);
-console.log(peanutAllergy.checked);
-console.log(vegan.checked);
-console.log(vegetarian.checked);
-console.log(pescetarian.checked);
-
-
-/* 
-    We need to: get the page to function with the checkboxes.
-        If [checkboxID] is checked, return [checkboxAPIinfo]
-
-    If no checkbox is checked, disable generate-recipes button.
-
-*/
-
 //Coding Starts Here:
 
-// function showDiv(){
-//     //hide bottom section
-//     var bottomSection = document.getElementById("bottom-section")
-//     bottomSection.setAttribute("class", "hide");
 
-//     //un-hide bottom section
-//     bottomSection.removeAttribute("class");
-// }
 
-function testing() {
-    if(glutenAllergy.checked) {
-        console.log("checked");
-    } else {
-        console.log("not checked");
-    }
-};
+//This is an event listener that also console logs whether or not checkbox is checked.
+
+dairyAllergy.addEventListener("change", function (e) {console.log(e.target.checked)});
+glutenAllergy.addEventListener("change", function (e) {console.log(e.target.checked)});
+peanutAllergy.addEventListener("change", function (e) {console.log(e.target.checked)});
+vegan.addEventListener("change", function (e) {console.log(e.target.checked)});
+vegetarian.addEventListener("change", function (e) {console.log(e.target.checked)});
+pescetarian.addEventListener("change", function (e) {console.log(e.target.checked)});
+
+function showDiv(){
+    //hide bottom section
+    var bottomSection = document.getElementById("bottom-section")
+    bottomSection.setAttribute("class", "hide");
+
+    //un-hide bottom section
+    bottomSection.removeAttribute("class");
+}
+
+if(glutenAllergy.checked === true){
+    showDiv();
+}
 
 
 //Gluten-free response:
