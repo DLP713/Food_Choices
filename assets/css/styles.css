@@ -41,6 +41,8 @@ body{
 }
 
 .banner{
+    font-size: xx-large;
+
     background-color: transparent;
     display:flex;
     flex-direction:column;
@@ -52,11 +54,12 @@ body{
 }
 
 #siteName{
-    opacity: .7;
+    font-family: 'Monoton', cursive;
+    opacity: 1;
     align-self: center;
     margin-top:-85px;
-    font-weight: lighter;
-    color:white;
+    font-weight: bolder;
+    color:rgb(19, 235, 145);
 }
 
 #diet-div{
