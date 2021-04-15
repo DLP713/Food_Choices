@@ -41,6 +41,33 @@ const vegan = document.getElementById('vegan');
 const vegetarian = document.getElementById('vegetarian');
 const pescetarian = document.getElementById('pescetarian');
 
+const formEl = document.getElementById('form-header')
+
+formEl.addEventListener('submit', function(evt) {
+    evt.preventDefault()
+  
+    const formElements = evt.target
+ 
+
+    console.log(evt.target.elements)
+    const gluten = formElements.gluten
+    const dairy = formElements.dairy
+    const peanut = formElements.peanut
+    const vegetarian = formElements.vegetarian
+    const vegan = formElements.vegan
+    const pescetarian = formElements.pescetarian
+    console.log('gluten', gluten)
+    const values = [gluten, dairy, vegetarian, pescetarian, vegan, peanut]
+ 
+    let checkedElements = values.filter(el => el.checked)
+        checkedElements.forEach(el => {
+
+            console.log(el.value)
+        })
+})
+
+
+
 let checkboxArray = [dairyAllergy, glutenAllergy, peanutAllergy, vegan, vegetarian, pescetarian];
 console.log(checkboxArray.length);
 
@@ -57,6 +84,15 @@ vegan.addEventListener("change", function (e) {console.log(e.target.checked)});
 vegetarian.addEventListener("change", function (e) {console.log(e.target.checked)});
 pescetarian.addEventListener("change", function (e) {console.log(e.target.checked)});
 
+// function showDivGluten() {
+
+//     if (glutenAllergy.checked) {
+//         console.log('CLUTEN ALLERGY IS CHECKED')
+//     showDiv(); //when checked
+//     }
+// }
+
+
 function showDiv(){
     //hide bottom section
     var bottomSection = document.getElementById("bottom-section")
@@ -66,9 +102,8 @@ function showDiv(){
     bottomSection.removeAttribute("class");
 }
 
-if(glutenAllergy.checked === true){
-    showDiv();
-}
+
+showDiv()
 
 
 //Gluten-free response:
