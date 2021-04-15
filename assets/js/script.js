@@ -37,27 +37,22 @@ var generateButton = document.getElementById("generate-recipes");
 const dairyAllergy = document.getElementById('dairyAllergy');
 const glutenAllergy = document.getElementById('glutenAllergy');
 const peanutAllergy = document.getElementById('peanutAllergy');
-const treenutAllergy = document.getElementById('treenutAllergy');
 const vegan = document.getElementById('vegan');
 const vegetarian = document.getElementById('vegetarian');
 const pescetarian = document.getElementById('pescetarian');
-const eggAllergy = document.getElementById('eggAllergy');
-const soyAllergy = document.getElementById('soyAllergy');
-const fishAllergy = document.getElementById('fishAllergy');
-const shellfishAllergy = document.getElementById('shellfishAllergy');
+
+let checkboxArray = [dairyAllergy, glutenAllergy, peanutAllergy, vegan, vegetarian, pescetarian];
+console.log(checkboxArray.length);
+
 
 //This is to console log whether or not checkbox is checked
 console.log(dairyAllergy.checked);
 console.log(glutenAllergy.checked);
 console.log(peanutAllergy.checked);
-console.log(treenutAllergy.checked);
 console.log(vegan.checked);
 console.log(vegetarian.checked);
 console.log(pescetarian.checked);
-console.log(eggAllergy.checked);
-console.log(soyAllergy.checked);
-console.log(fishAllergy.checked);
-console.log(shellfishAllergy.checked);
+
 
 /* 
     We need to: get the page to function with the checkboxes.
@@ -69,25 +64,25 @@ console.log(shellfishAllergy.checked);
 
 //Coding Starts Here:
 
-// if(dairyAllery.checked === true){
-// display
+// function showDiv(){
+//     //hide bottom section
+//     var bottomSection = document.getElementById("bottom-section")
+//     bottomSection.setAttribute("class", "hide");
+
+//     //un-hide bottom section
+//     bottomSection.removeAttribute("class");
 // }
 
-
-//checkbox.onclick = showDiv;
-
-function showDiv(){
-    //hide bottom section
-    var bottomSection = document.getElementById("bottom-section")
-    bottomSection.setAttribute("class", "hide");
-
-    //un-hide bottom section
-    bottomSection.removeAttribute("class");
-}
-
-generateButton.onclick = showDiv;
+function testing() {
+    if(glutenAllergy.checked) {
+        console.log("checked");
+    } else {
+        console.log("not checked");
+    }
+};
 
 
+//Gluten-free response:
 
 var endpoint = `https://api.edamam.com/search?q=${searchTermGluten}&app_id=${APP_ID}&app_key=${API_KEY}&from=0&to=6&calories=591-722`;
 
@@ -126,19 +121,19 @@ fetch(endpoint)
 );
 
 // For adding data to Local Storage
-favoriteRecipe.addEventListener("click", function(event){
-    event.preventDefault();
+// favoriteRecipe.addEventListener("click", function(event){
+//     event.preventDefault();
  
-    var submission ={
-        favoriteRecipe: favoriteRecipe.value,
-    };
+//     var submission ={
+//         favoriteRecipe: favoriteRecipe.value,
+//     };
  
-    console.log(JSON.stringify(submission));
+//     console.log(JSON.stringify(submission));
     
-    localStorage.setItem("submission", JSON.stringify(submission));
+//     localStorage.setItem("submission", JSON.stringify(submission));
  
-    var submissionParse = JSON.parse(localStorage.getItem("submission"));
-});
+//     var submissionParse = JSON.parse(localStorage.getItem("submission"));
+// });
 
 
 
