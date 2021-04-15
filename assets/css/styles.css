@@ -131,6 +131,7 @@ how to get the words closer to the text boxes. */
  opacity: .5;
  background: rgb(172, 171, 171);
  color: #FFF;
+ z-index: 0;
 }
 
 .card-content {
@@ -146,12 +147,14 @@ how to get the words closer to the text boxes. */
     margin-top: -15px;
     align-self: center;
     height: 100%;
+    z-index:1;
 }
 
 .card-image {
     width:70%;
     align-self:center;
     margin-top:25px;
+    z-index:0;
 }
 
 .card-link {
