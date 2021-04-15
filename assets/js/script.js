@@ -14,6 +14,10 @@ var searchTerm = 'Dairy Free';
 var API_KEY = 'cc39f5ebdea0803927099971a33add46';
 var APP_ID = 'daae60e1';
 
+// For sending data for favorite recipes to local storage
+
+var favoriteRecipe = document.querySelector("#iconwrapper");
+
 // These are used with the API response
 const searchTermDairy = 'Dairy Free';
 const searchTermGluten = 'Gluten Free';
@@ -121,6 +125,20 @@ fetch(endpoint)
     
 );
 
+// For adding data to Local Storage
+favoriteRecipe.addEventListener("click", function(event){
+    event.preventDefault();
+ 
+    var submission ={
+        favoriteRecipe: favoriteRecipe.value,
+    };
+ 
+    console.log(JSON.stringify(submission));
+    
+    localStorage.setItem("submission", JSON.stringify(submission));
+ 
+    var submissionParse = JSON.parse(localStorage.getItem("submission"));
+});
 
 
 
