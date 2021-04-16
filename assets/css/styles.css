@@ -10,7 +10,6 @@ body{
     padding:20px;
 }
 
-
 #top-section{
     width:99.5%;
     height:20%;
@@ -80,26 +79,6 @@ body{
     margin:0;
 }
 
-/* .filled-in{
-    margin:auto;
-    padding:auto;
-
-    I set parameters but wasn't working.
-} */
-
-/* Need to figure out how to get spans to row evenly and 
-how to get the words closer to the text boxes. */
-
-/* #generate-recipes{
-    position:relative;
-    margin-top: 12px;
-    background-color:rgb(39, 70, 39);
-    border: 1px solid green;
-    color: white;
-    height:35px;
-    width:165px;
-} */
-
 #bottom-section{
     width:99.5%;
     height:80%;
@@ -123,7 +102,7 @@ how to get the words closer to the text boxes. */
 
 .card{
     width: 300px;
-    height: 360px;
+    height: 400px;
     padding: 25px;
     text-align: center;
     display:flex;
@@ -143,25 +122,26 @@ how to get the words closer to the text boxes. */
     font-weight:lighter;
     width: 98%;
     height:15%;
-    /* align-self: center; */
 }
 
 .card-title{
-    margin-top: -300px;
+    margin-top: -25px;
     height: 100%;
     z-index:1;
+    color:rgb(39, 70, 39);
 }
 
 .card-image {
-    width:70%;
-    align-self:center;
-    margin-top:25px;
+    width:100%;
+    margin-top:-25px;
     z-index:0;
+    border-radius: 5px;
 }
 
 .card-link {
     margin-left:100px;
 }
+
 
 .iconwrapperadd { 
 position:absolute;

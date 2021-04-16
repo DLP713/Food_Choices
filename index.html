@@ -35,36 +35,33 @@
 
             <section id="diet-div">
 
-                <form action="diet-selection" id="form-header"><span>Diet Selection:</span> <br><br>
+                <form action="diet-selection" value="formHeader" id="form-header"><span>Diet Selection:</span> <br><br>
 
                     <label>
-                        <input name='dairy' type="checkbox" id="dairyAllergy" class="filled-in" />
+                        <input value='dairy' name="group1" type="radio" id="dairyAllergy" class="with-gap" />
                         <span>Dairy Allergy</span>
                     </label>
                     <label>
-                        <input value='Gluten Free' name='gluten' type="checkbox" id="glutenAllergy" class="filled-in" />
+                        <input value='Gluten Free' name="group1" type="radio" id="glutenAllergy" class="with-gap"/>
                         <span>Gluten Allergy</span>
                     </label>
                     <label>
-                        <input name='peanut' type="checkbox" id="peanutAllergy" class="filled-in" />
+                        <input value='peanut' name="group1" type="radio" id="peanutAllergy" class="with-gap"/>
                         <span>Peanut Allergy</span>
                     </label>
                     <label>
-                        <input name='vegan' type="checkbox" id="vegan" class="filled-in" />
+                        <input value='vegan' name="group1" type="radio" id="vegan" class="with-gap"/>
                         <span>Vegan</span>
                     </label>
                     <label>
-                        <input value='Vegetarian' name='vegetarian' type="checkbox" id="vegetarian" class="filled-in" />
+                        <input value='Vegetarian' name="group1" type="radio" id="vegetarian" class="with-gap" />
                         <span>Vegetarian</span>
                     </label>
                     <label>
-                        <input value='Pescetarian' name='pescetarian' type="checkbox" id="pescetarian" class="filled-in" />
+                        <input value='Pescetarian' name="group1" type="radio" id="pescetarian" class="with-gap"/>
                         <span>Pescetarian</span>
                     </label>
-                    <input type='submit' value='Submit' />
                 </form>
-
-                <!-- <button id="generate-recipes">Generate Recipes</button> -->
 
             </section>
         </div>
@@ -76,74 +73,90 @@
         <section id="recipe-returns">
             <!--This is basically the border in the bottom div-->
 
-            <a class="card" href="http://www.foodnetwork.com">
+            <div class="card">
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
                 <div class="card-image">
-                    <img src="./assets/images/chickensandwich.jpeg">
+                    <img src="">
                 </div>
                 <div class="iconwrapperadd">
                     <i class="fas fa-plus"></i>
                 </div>
 
+
             </a>
             <a class="card" href="http://www.foodnetwork.com">
+
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
                 <div class="card-image">
-                    <img src="./assets/images/chickensandwich.jpeg">
+                    <img src="">
                 </div>
                 <div class="iconwrapperadd">
                     <i class="fas fa-plus"></i>
                 </div>
-            </a>
-            <a class="card" href="http://www.foodnetwork.com">
+                <div class="card-url">
+                </div>
+            </div>
+
+            <div class="card">
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
                 <div class="card-image">
-                    <img src="./assets/images/chickensandwich.jpeg">
+                    <img src="">
                 </div>
                 <div class="iconwrapperadd">
                     <i class="fas fa-plus"></i>
                 </div>
-            </a>
-            <a class="card" href="http://www.foodnetwork.com">
+                <div class="card-url">
+                </div>
+            </div>
+
+            <div class="card">
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
                 <div class="card-image">
-                    <img src="./assets/images/chickensandwich.jpeg">
+                    <img src="">
                 </div>
                 <div class="iconwrapperadd">
                     <i class="fas fa-plus"></i>
                 </div>
-            </a>
-            <a class="card" href="http://www.foodnetwork.com">
+                <div class="card-url">
+                </div>
+            </div>
+
+            <div class="card">
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
                 <div class="card-image">
-                    <img src="./assets/images/chickensandwich.jpeg">
+                    <img src="">
                 </div>
                 <div class="iconwrapperadd">
                     <i class="fas fa-plus"></i>
                 </div>
-            </a>
-            <a class="card" href="http://www.foodnetwork.com">
+                <div class="card-url">
+                </div>
+            </div>
+
+            <div class="card">
                 <div class="card-content">
                     <span class="card-title"></span>
                 </div>
                 <div class="card-image">
-                    <img src="./assets/images/chickensandwich.jpeg">
+                    <img src="">
                 </div>
                 <div class="iconwrapperadd">
                 <i class="fas fa-plus"></i>
                 </div>
+
             </a>
      
+
         </section>
 
         <i id="icon1" onclick="change('icon1')" class="fas fa-plus" aria hidden="true">
