@@ -88,6 +88,8 @@ function searchAPI(searchTerm) {
                     'href',
                     `${data.hits[i].recipe.url}`
                 );
+                cardLink.textContent = "Click to view recipe!"
+                console.log(cardLink);
 
                 var cardImage = document.createElement('img');
                 cardImage.classList.add('card-image');
@@ -99,6 +101,7 @@ function searchAPI(searchTerm) {
                 cardAppend[i].appendChild(cardTitle);
                 cardAppend[i].appendChild(cardImage);
                 cardAppend[i].appendChild(cardLink);
+                console.log(cardAppend[i])
             };
         })
         
