@@ -131,12 +131,12 @@ how to get the words closer to the text boxes. */
     flex-wrap:nowrap;
 }
 
-.card:hover{
+/* .card:hover{
  opacity: .5;
  background: rgb(172, 171, 171);
  color: #FFF;
  z-index: 0;
-}
+} */
 
 .card-content {
     color:rgb(39, 70, 39);
@@ -147,25 +147,32 @@ how to get the words closer to the text boxes. */
 }
 
 .card-title{
-    margin-top: -300px;
+    margin-top: -25px;
     height: 100%;
     z-index:1;
 }
 
 .card-image {
-    width:70%;
+    width:100%;
     align-self:center;
-    margin-top:25px;
+    margin-top:-25px;
     z-index:0;
+    border-radius: 5px;
 }
+/* Height does not adjust. */
 
 .card-link {
     margin-left:100px;
+}
+
+.card-url{
+    position:absolute;
+    align-self:center;
+    margin-top: 310px;
 }
 
 .iconwrapper{
 position:absolute;
 top: 10px;
 right: 10px;
-
 }
