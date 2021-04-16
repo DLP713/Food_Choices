@@ -10,7 +10,6 @@ body{
     padding:20px;
 }
 
-
 #top-section{
     width:99.5%;
     height:20%;
@@ -80,26 +79,6 @@ body{
     margin:0;
 }
 
-/* .filled-in{
-    margin:auto;
-    padding:auto;
-
-    I set parameters but wasn't working.
-} */
-
-/* Need to figure out how to get spans to row evenly and 
-how to get the words closer to the text boxes. */
-
-/* #generate-recipes{
-    position:relative;
-    margin-top: 12px;
-    background-color:rgb(39, 70, 39);
-    border: 1px solid green;
-    color: white;
-    height:35px;
-    width:165px;
-} */
-
 #bottom-section{
     width:99.5%;
     height:80%;
@@ -123,7 +102,7 @@ how to get the words closer to the text boxes. */
 
 .card{
     width: 300px;
-    height: 360px;
+    height: 400px;
     padding: 25px;
     text-align: center;
     display:flex;
@@ -131,35 +110,33 @@ how to get the words closer to the text boxes. */
     flex-wrap:nowrap;
 }
 
-/* .card:hover{
+.card:hover{
  opacity: .5;
  background: rgb(172, 171, 171);
  color: #FFF;
  z-index: 0;
-} */
+}
 
 .card-content {
     color:rgb(39, 70, 39);
     font-weight:lighter;
     width: 98%;
     height:15%;
-    /* align-self: center; */
 }
 
 .card-title{
     margin-top: -25px;
     height: 100%;
     z-index:1;
+    color:rgb(39, 70, 39);
 }
 
 .card-image {
     width:100%;
-    align-self:center;
     margin-top:-25px;
     z-index:0;
     border-radius: 5px;
 }
-/* Height does not adjust. */
 
 .card-link {
     margin-left:100px;
@@ -167,12 +144,15 @@ how to get the words closer to the text boxes. */
 
 .card-url{
     position:absolute;
+    margin-top: 350px;
+    color: rgb(39, 70, 39, 0.9);
+    /*The 0.5 at the end of the color is for opacity.*/
     align-self:center;
-    margin-top: 310px;
 }
 
 .iconwrapper{
 position:absolute;
 top: 10px;
 right: 10px;
+color: rgb(39, 70, 39, 0.5);
 }
