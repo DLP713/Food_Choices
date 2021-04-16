@@ -39,44 +39,61 @@ var generateButton = document.getElementById("generate-recipes");
 const dairyAllergy = document.getElementById('dairyAllergy');
 const glutenAllergy = document.getElementById('glutenAllergy');
 const peanutAllergy = document.getElementById('peanutAllergy');
-const treenutAllergy = document.getElementById('treenutAllergy');
 const vegan = document.getElementById('vegan');
 const vegetarian = document.getElementById('vegetarian');
 const pescetarian = document.getElementById('pescetarian');
-const eggAllergy = document.getElementById('eggAllergy');
-const soyAllergy = document.getElementById('soyAllergy');
-const fishAllergy = document.getElementById('fishAllergy');
-const shellfishAllergy = document.getElementById('shellfishAllergy');
 
-//This is to console log whether or not checkbox is checked
-console.log(dairyAllergy.checked);
-console.log(glutenAllergy.checked);
-console.log(peanutAllergy.checked);
-console.log(treenutAllergy.checked);
-console.log(vegan.checked);
-console.log(vegetarian.checked);
-console.log(pescetarian.checked);
-console.log(eggAllergy.checked);
-console.log(soyAllergy.checked);
-console.log(fishAllergy.checked);
-console.log(shellfishAllergy.checked);
+const formEl = document.getElementById('form-header')
 
-/* 
-    We need to: get the page to function with the checkboxes.
-        If [checkboxID] is checked, return [checkboxAPIinfo]
+formEl.addEventListener('submit', function(evt) {
+    evt.preventDefault()
+  
+    const formElements = evt.target
+ 
 
-    If no checkbox is checked, disable generate-recipes button.
+    console.log(evt.target.elements)
+    const gluten = formElements.gluten
+    const dairy = formElements.dairy
+    const peanut = formElements.peanut
+    const vegetarian = formElements.vegetarian
+    const vegan = formElements.vegan
+    const pescetarian = formElements.pescetarian
+    console.log('gluten', gluten)
+    const values = [gluten, dairy, vegetarian, pescetarian, vegan, peanut]
+ 
+    let checkedElements = values.filter(el => el.checked)
+        checkedElements.forEach(el => {
 
-*/
+            console.log(el.value)
+        })
+})
+
+
+
+let checkboxArray = [dairyAllergy, glutenAllergy, peanutAllergy, vegan, vegetarian, pescetarian];
+console.log(checkboxArray.length);
 
 //Coding Starts Here:
 
-// if(dairyAllery.checked === true){
-// display
+
+
+//This is an event listener that also console logs whether or not checkbox is checked.
+
+dairyAllergy.addEventListener("change", function (e) {console.log(e.target.checked)});
+glutenAllergy.addEventListener("change", function (e) {console.log(e.target.checked)});
+peanutAllergy.addEventListener("change", function (e) {console.log(e.target.checked)});
+vegan.addEventListener("change", function (e) {console.log(e.target.checked)});
+vegetarian.addEventListener("change", function (e) {console.log(e.target.checked)});
+pescetarian.addEventListener("change", function (e) {console.log(e.target.checked)});
+
+// function showDivGluten() {
+
+//     if (glutenAllergy.checked) {
+//         console.log('CLUTEN ALLERGY IS CHECKED')
+//     showDiv(); //when checked
+//     }
 // }
 
-
-//checkbox.onclick = showDiv;
 
 function showDiv(){
     //hide bottom section
@@ -87,9 +104,11 @@ function showDiv(){
     bottomSection.removeAttribute("class");
 }
 
-generateButton.onclick = showDiv;
+
+showDiv()
 
 
+//Gluten-free response:
 
 var endpoint = `https://api.edamam.com/search?q=${searchTermGluten}&app_id=${APP_ID}&app_key=${API_KEY}&from=0&to=6&calories=591-722`;
 
@@ -128,19 +147,19 @@ fetch(endpoint)
 );
 
 // For adding data to Local Storage
-favoriteRecipe.addEventListener("click", function(event){
-    event.preventDefault();
+// favoriteRecipe.addEventListener("click", function(event){
+//     event.preventDefault();
  
-    var submission ={
-        favoriteRecipe: favoriteRecipe.value,
-    };
+//     var submission ={
+//         favoriteRecipe: favoriteRecipe.value,
+//     };
  
-    console.log(JSON.stringify(submission));
+//     console.log(JSON.stringify(submission));
     
-    localStorage.setItem("submission", JSON.stringify(submission));
+//     localStorage.setItem("submission", JSON.stringify(submission));
  
-    var submissionParse = JSON.parse(localStorage.getItem("submission"));
-});
+//     var submissionParse = JSON.parse(localStorage.getItem("submission"));
+// });
 
 // Button for Favorite
 
@@ -150,8 +169,9 @@ for(var i=0; i < playlist_buttons.length; i++) {
 }
   function togglePlaylistButton(event) {
     var current_icon = event.target.innerHTML;
-    //now switch event.target.innerHTML based on the current icon
   }
+
+  var playlist_buttons = document.getElementsByClassName('material-icons').addEventListener('click', togglePlaylistButton);
 
 
 // cardContent = document.classList.add(".card-content");

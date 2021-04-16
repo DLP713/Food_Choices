@@ -59,7 +59,7 @@ body{
     align-self: center;
     margin-top:-85px;
     font-weight: bolder;
-    color:rgb(19, 235, 145);
+    color:white;
 }
 
 #diet-div{
@@ -90,7 +90,7 @@ body{
 /* Need to figure out how to get spans to row evenly and 
 how to get the words closer to the text boxes. */
 
-#generate-recipes{
+/* #generate-recipes{
     position:relative;
     margin-top: 12px;
     background-color:rgb(39, 70, 39);
@@ -98,7 +98,7 @@ how to get the words closer to the text boxes. */
     color: white;
     height:35px;
     width:165px;
-}
+} */
 
 #bottom-section{
     width:99.5%;
