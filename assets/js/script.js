@@ -29,7 +29,6 @@ const searchTermPescetarian = 'Pescetarian';
 
 //These are for the checkboxes
 const card = document.getElementsByClassName("card");
-const generateButton = document.getElementById("generate-recipes");
 const dairyAllergy = document.getElementById('dairyAllergy');
 const glutenAllergy = document.getElementById('glutenAllergy');
 const peanutAllergy = document.getElementById('peanutAllergy');
@@ -37,12 +36,7 @@ const vegan = document.getElementById('vegan');
 const vegetarian = document.getElementById('vegetarian');
 const pescetarian = document.getElementById('pescetarian');
 
-let checkboxArray = [dairyAllergy, glutenAllergy, peanutAllergy, vegan, vegetarian, pescetarian];
-console.log(checkboxArray.length);
-
 //Coding Starts Here:
-
-//Gluten-free Card Function:
 
 function showDiv(inputSearchTerm){
     //hide bottom section
@@ -59,7 +53,29 @@ function showDiv(inputSearchTerm){
 glutenAllergy.addEventListener("click", function (e) {
     console.log(e.target)
     showDiv(searchTermGluten); //when checked
-});
+}, {once: true}); //disable once clicked once
+
+peanutAllergy.addEventListener("click", function (e) {
+    console.log(e.target)
+    showDiv(searchTermPeanut); //when checked
+}, {once: true}); //disable once clicked once
+
+vegan.addEventListener("click", function (e) {
+    console.log(e.target)
+    showDiv(searchTermVegan); //when checked
+}, {once: true}); //disable once clicked once
+
+
+vegetarian.addEventListener("click", function (e) {
+    console.log(e.target)
+    showDiv(searchTermVegetarian); //when checked
+}, {once: true}); //disable once clicked once
+
+
+pescetarian.addEventListener("click", function (e) {
+    console.log(e.target)
+    showDiv(searchTermPescetarian); //when checked
+}, {once: true}); //disable once clicked once
 
 
 //API response:
@@ -108,6 +124,34 @@ function searchAPI(searchTerm) {
     );
 }
 
+// function showQuestions() {
+//     // get current question object from array
+//     var currentDiet = listedQuestions[currentQuestionIndex];
+  
+//     // update title with current question
+//     var questionTitle = document.getElementById("questionTitle");
+//     questionTitle.textContent = currentQuestion.title;
+  
+//     // clear out any old answer choices
+//     quizAnswers.innerHTML = "";
+  
+//     // loop over choices
+//     currentQuestion.choices.forEach(function(choice, i) {
+//       // create new button for each choice
+//       var newButton = document.createElement("button");
+//       newButton.setAttribute("class", "choice");
+//       newButton.setAttribute("value", choice);
+  
+//       newButton.textContent = i + 1 + ". " + choice;
+  
+//       // attach click event listener to each choice
+//       newButton.onclick = questionClick;
+  
+//       // display on the page
+//       quizAnswers.appendChild(newButton);
+//     });
+//   }
+
 
 // //Dairy-free response:
 
@@ -128,54 +172,6 @@ function searchAPI(searchTerm) {
 // });
 
 
-// //Dairy-free API response:
-
-// var endpoint = `https://api.edamam.com/search?q=${searchTermDairy}&app_id=${APP_ID}&app_key=${API_KEY}&from=0&to=6&calories=591-722`;
-
-// fetch(endpoint)
-// 	.then((res) => (res.json())
-// 	.then((data) => {
-// 		console.log(data);
-
-//         var cardAppend = document.getElementsByClassName("card");
-
-//         for (var i = 0; i < data.hits.length; i++){
-
-//             var cardAppend = document.getElementsByClassName("card");
-
-//             var cardTitle = document.createElement('h6');
-//             cardTitle.classList.add('card-title');
-//             cardTitle.textContent = data.hits[i].recipe.label;
-
-//             // var cardLink = document.createURL('a');
-//             // cardLink.classList.add('card');
-//             // cardLink.createURL = data.hits[i].recipe.url;
-
-//             // var cardImage = document.createElement('img');
-//             // cardImage = document.classList.ass('card-image');
-//             // cardImage.setAttribute(
-//             //     'src',
-//             //      `https://www.edamam.com/web-img/${data.hits[i].recipe.image}.jpg`
-//             // );
-
-//             cardAppend[i].appendChild(cardTitle);
-//             // cardAppend[i].appendChild(cardImage);
-//             //cardAppend[i].appendChild(cardLink);
-//         };
-//     })
-    
-// );
-
-
-
-
-
-peanutAllergy.addEventListener("click", function (e) {console.log(e.target.checked)});
-vegan.addEventListener("click", function (e) {console.log(e.target.checked)});
-vegetarian.addEventListener("click", function (e) {console.log(e.target.checked)});
-pescetarian.addEventListener("click", function (e) {console.log(e.target.checked)});
-
-
 
 
 
@@ -194,14 +190,4 @@ pescetarian.addEventListener("click", function (e) {console.log(e.target.checked
  
 //     var submissionParse = JSON.parse(localStorage.getItem("submission"));
 // });
-
-
-
-
-
-// cardContent = document.classList.add(".card-content");
-            // cardContent.textContent = data.hits[i].recipe.;
-
-            // cardAppend[i].appendChild(cardContent);
-            // cardAppend[i].appendChild(cardLink);
 
