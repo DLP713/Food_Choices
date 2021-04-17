@@ -2,7 +2,6 @@
 var contentCard = "https://material-ui.com/components/cards/#RecipeReviewCard.js";
 var apiID = `daae60e1`;
 var apiKey = `cc39f5ebdea0803927099971a33add46`;
-var currentRecipeIndex = 0;
 
 // Edamam API Calls for Recipe
 
@@ -20,21 +19,25 @@ var APP_ID = 'daae60e1';
 var favoriteRecipe = document.querySelector("#iconwrapper");
 
 // These are used with the API response
-const searchTermDairy = 'Dairy Free';
 const searchTermGluten = 'Gluten Free';
 const searchTermPeanut = 'Peanut Free';
 const searchTermVegan = 'Vegan';
 const searchTermVegetarian = 'Vegetarian';
-const searchTermPescetarian = 'Pescetarian';
+const searchTermPorkFree = 'Pork Free';
+const searchTermKosher = 'Kosher';
+const searchTermSoy = 'Soy-Free"';
 
 //These are for the checkboxes
 const card = document.getElementsByClassName("card");
-const dairyAllergy = document.getElementById('dairyAllergy');
 const glutenAllergy = document.getElementById('glutenAllergy');
 const peanutAllergy = document.getElementById('peanutAllergy');
 const vegan = document.getElementById('vegan');
 const vegetarian = document.getElementById('vegetarian');
-const pescetarian = document.getElementById('pescetarian');
+const porkFree = document.getElementById('porkFree');
+const kosher = document.getElementById('kosher');
+const soy = document.getElementById('soy');
+
+var cardAppend = document.getElementsByClassName("card");
 
 //Coding Starts Here:
 
@@ -51,9 +54,18 @@ function showDiv(inputSearchTerm){
 //Event listener to console log and show gluten cards:
 
 glutenAllergy.addEventListener("click", function (e) {
-    console.log(e.target)
+    console.log(true)
     showDiv(searchTermGluten); //when checked
 }, {once: true}); //disable once clicked once
+
+if (glutenAllergy !== true){
+    clearCards(cardAppend);
+}
+
+function clearCards(cardAppend)
+{
+    cardAppend.innerHTML= "";
+}
 
 peanutAllergy.addEventListener("click", function (e) {
     console.log(e.target)
@@ -65,23 +77,31 @@ vegan.addEventListener("click", function (e) {
     showDiv(searchTermVegan); //when checked
 }, {once: true}); //disable once clicked once
 
-
 vegetarian.addEventListener("click", function (e) {
     console.log(e.target)
     showDiv(searchTermVegetarian); //when checked
 }, {once: true}); //disable once clicked once
 
-
-pescetarian.addEventListener("click", function (e) {
+porkFree.addEventListener("click", function (e) {
     console.log(e.target)
-    showDiv(searchTermPescetarian); //when checked
+    showDiv(searchTermPorkFree); //when checked
+}, {once: true}); //disable once clicked once
+
+kosher.addEventListener("click", function (e) {
+    console.log(e.target)
+    showDiv(searchTermKosher); //when checked
+}, {once: true}); //disable once clicked once
+
+soy.addEventListener("click", function (e) {
+    console.log(e.target)
+    showDiv(searchTermSoy); //when checked
 }, {once: true}); //disable once clicked once
 
 
 //API response:
 function searchAPI(searchTerm) {
 
-    var endpoint = `https://api.edamam.com/search?q=${searchTerm}&app_id=${APP_ID}&app_key=${API_KEY}&from=0&to=6&calories=591-722`;
+    var endpoint = `https://api.edamam.com/search?q=${searchTerm}&app_id=${APP_ID}&app_key=${API_KEY}&from=0&to=10&calories=591-722`;
 
     fetch(endpoint)
         .then((res) => (res.json())
@@ -93,6 +113,7 @@ function searchAPI(searchTerm) {
             for (var i = 0; i < data.hits.length; i++){
 
                 var cardAppend = document.getElementsByClassName("card");
+                // cardAppend.innerHTML = "";
 
                 var cardTitle = document.createElement('h6');
                 cardTitle.classList.add('card-title');
@@ -123,57 +144,6 @@ function searchAPI(searchTerm) {
         
     );
 }
-
-// function showQuestions() {
-//     // get current question object from array
-//     var currentDiet = listedQuestions[currentQuestionIndex];
-  
-//     // update title with current question
-//     var questionTitle = document.getElementById("questionTitle");
-//     questionTitle.textContent = currentQuestion.title;
-  
-//     // clear out any old answer choices
-//     quizAnswers.innerHTML = "";
-  
-//     // loop over choices
-//     currentQuestion.choices.forEach(function(choice, i) {
-//       // create new button for each choice
-//       var newButton = document.createElement("button");
-//       newButton.setAttribute("class", "choice");
-//       newButton.setAttribute("value", choice);
-  
-//       newButton.textContent = i + 1 + ". " + choice;
-  
-//       // attach click event listener to each choice
-//       newButton.onclick = questionClick;
-  
-//       // display on the page
-//       quizAnswers.appendChild(newButton);
-//     });
-//   }
-
-
-// //Dairy-free response:
-
-// dairyAllergy.addEventListener("click", function (e) {console.log(e.target)});
-
-// function showDivDairy(){
-//     //hide bottom section
-//     var bottomSection = document.getElementById("bottom-section")
-//     bottomSection.setAttribute("class", "hide");
-
-//     //un-hide bottom section
-//     bottomSection.removeAttribute("class");
-// }
-
-// dairyAllergy.addEventListener("click", function (e) {
-//     console.log(e.target)
-//     showDivDairy(); //when checked
-// });
-
-
-
-
 
 
 // For adding data to Local Storage
