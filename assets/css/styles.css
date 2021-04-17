@@ -133,7 +133,7 @@ body{
 
 .card-image {
     width:100%;
-    margin-top:-25px;
+    margin-top:40px;
     z-index:0;
     border-radius: 5px;
 }
@@ -162,4 +162,3 @@ top: 10px;
 right: 10px;
 color: rgb(39, 70, 39, 0.5);
 }
-
