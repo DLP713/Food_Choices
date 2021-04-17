@@ -31,15 +31,15 @@ var clearResults = document.getElementById("clearResults");
 
 //Coding Starts Here:
 
-function clearCards() {
-    //hide bottom section
-    var bottomSection = document.getElementById("recipe-returns")
-    bottomSection.innerHTML = "";
-};
+// function clearCards() {
+//     //hide bottom section
+//     var bottomSection = document.getElementById("recipe-returns")
+//     bottomSection.innerHTML = "";
+// };
 
-clearResults.addEventListener("click", function (e) {
-    clearCards();   //when checked
-}, { once: true }); //disable once clicked once
+// clearResults.addEventListener("click", function (e) {
+//     clearCards();   //when checked
+// }, { once: true }); //disable once clicked once
 
 
 // function clearDiv(cardAppend){
