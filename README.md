@@ -1,4 +1,4 @@
-# Food Choices
+# Foodly
 
 ## Description
 
@@ -34,9 +34,14 @@ This application provides users with food recipe choices based on their selectio
 ## Wireframes
 ![project wireframe](./assets/images/Wireframing-Project-1.png) 
 
-## APIs Used
-* [Rapid API](https://rapidapi.com/spoonacular/api/recipe-food-nutrition)
-* [Edamam](https://developer.edamam.com/food-database-api-docs)
+## Screenshot
+![screenshot](./assets/images/foodly_preview.png)
+
+## APIs
+* [Edamam Recipe Search](https://developer.edamam.com/edamam-docs-recipe-api)
+* [Edamam Nutrition Analysis](https://developer.edamam.com/edamam-docs-nutrition-api)
+
+## Design Framework 
 * [Materialize](https://materializecss.com/)
 
 ## Roles
@@ -56,5 +61,3 @@ This application provides users with food recipe choices based on their selectio
 * [Terence Chaney](https://github.com/tchaney0327)
 * [Cesar De La Portilla](https://github.com/DLP713)
 * [Mohammed Ottun](https://github.com/MohammedOttun)
-
-* Test
