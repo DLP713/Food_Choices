@@ -3,6 +3,8 @@ var contentCard = "https://material-ui.com/components/cards/#RecipeReviewCard.js
 var apiID = `daae60e1`;
 var apiKey = `cc39f5ebdea0803927099971a33add46`;
 
+
+
 // Edamam API Calls for Recipe
 
 var API_KEY = 'cc39f5ebdea0803927099971a33add46';
@@ -160,4 +162,25 @@ function searchAPI(searchTerm) {
  
 //     var submissionParse = JSON.parse(localStorage.getItem("submission"));
 // });
+
+
+//Event Listner for click to toggle
+var playlist_buttons = document.getElementsById('iconID');
+for(var i=0; i < playlist_buttons.length; i++) {
+  playlist_buttons[i].addEventListener('click', togglePlaylistButton);
+}
+
+//Toggle Function  
+function change (iconID){
+  if(document.getElementById(iconID).className=="fa fas fa-plus"){
+    document.getElementById(iconID).className = "fas fa-check";
+  }else{
+    document.getElementById(iconID).className = "fa fas fa-plus";
+  }
+}
+// cardContent = document.classList.add(".card-content");
+            // cardContent.textContent = data.hits[i].recipe.;
+
+            // cardAppend[i].appendChild(cardContent);
+            // cardAppend[i].appendChild(cardLink);
 
